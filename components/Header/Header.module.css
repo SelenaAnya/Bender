@@ -1,0 +1,277 @@
+.header {
+    background-color: #1a1a1a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+/* Logo */
+.logo {
+    flex-shrink: 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoImage {
+    height: 40px;
+    width: auto;
+}
+
+/* Navigation */
+.navigation {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ff6b35;
+}
+
+/* Right Section */
+.rightSection {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.langButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.langButton:hover {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+.ctaButton {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: #e5e5e5;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menuButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menuIcon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+}
+
+.mobileMenu.open {
+    max-height: 500px;
+}
+
+.mobileMenuContent {
+    padding: 0.5rem 1rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavigation {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.mobileNavigation li {
+    margin: 0;
+}
+
+.mobileNavigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.mobileNavigation a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobileLangButtons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobileLangButtons .langButton {
+    flex: 1;
+}
+
+.mobileCtaButton {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.mobileCtaButton:hover {
+    background-color: #e5e5e5;
+}
+
+/* Tablet - 744px */
+@media (min-width: 744px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .headerContent {
+        height: 72px;
+    }
+
+    .logoImage {
+        height: 45px;
+    }
+
+    .navigation a {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Desktop - 1366px */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 3rem;
+    }
+
+    .headerContent {
+        height: 80px;
+    }
+
+    .logoImage {
+        height: 48px;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .rightSection {
+        display: flex;
+    }
+
+    .menuButton {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+}
+
+/* Desktop Large - 1920px */
+@media (min-width: 1366px) {
+    .container {
+        padding: 0 4rem;
+    }
+
+    .navigation {
+        gap: 3rem;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+    }
+
+    .langButton,
+    .ctaButton {
+        font-size: 1rem;
+    }
+
+    .rightSection {
+        gap: 1rem;
+    }
+}
+
+/* Mobile - 360px */
+@media (max-width: 374px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .headerContent {
+        height: 56px;
+    }
+
+    .logoImage {
+        height: 35px;
+    }
+}
