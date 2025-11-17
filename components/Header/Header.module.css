@@ -83,6 +83,12 @@
     color: #1a1a1a;
 }
 
+.langButton.active {
+    background-color: white;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
 .ctaButton {
     padding: 0.5rem 1.5rem;
     background-color: white;
