@@ -10,7 +10,12 @@
 
 /* Hero Section */
 .heroSection {
-    max-width: 80rem;
+    background-image: url(../public/img/IMG_8760\ 1@2x.jpg);
+    background-size: cover;
+    background-position: center;
+
+    max-width: 1840px;
+    height: 860px;
     margin-left: auto;
     margin-right: auto;
     padding: 4rem 1rem;
@@ -56,6 +61,7 @@
         font-size: 3.75rem;
     }
 }
+
 
 .heroSubtitle {
     margin-top: 1.5rem;
