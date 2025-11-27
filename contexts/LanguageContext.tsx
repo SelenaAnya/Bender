@@ -1,9 +1,10 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { translations } from './translations';
 
 type Language = 'uk' | 'en';
+type TranslationNode = string | { [key: string]: TranslationNode };
 
 interface LanguageContextType {
     language: Language;
@@ -14,19 +15,30 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-    const [language, setLanguage] = useState<Language>('uk');
-    const [mounted, setMounted] = useState(false);
+    // Lazy initialization - функція виконується тільки один раз при створенні стану
+    const [language, setLanguageState] = useState<Language>(() => {
+        if (typeof window !== 'undefined') {
+            const savedLanguage = localStorage.getItem('language') as Language;
+            if (savedLanguage && (savedLanguage === 'uk' || savedLanguage === 'en')) {
+                return savedLanguage;
+            }
+        }
+        return 'uk';
+    });
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const setLanguage = (lang: Language) => {
+        setLanguageState(lang);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('language', lang);
+        }
+    };
 
     const t = (key: string): string => {
         const keys = key.split('.');
-        let value: any = translations[language];
+        let value: TranslationNode = translations[language];
 
         for (const k of keys) {
-            if (value && typeof value === 'object' && k in value) {
+            if (typeof value === 'object' && value !== null && k in value) {
                 value = value[k];
             } else {
                 return key;
@@ -36,10 +48,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         return typeof value === 'string' ? value : key;
     };
 
-    // Не рендеримо дітей до монтування на клієнті
-    if (!mounted) {
-        return null;
-    }
 
     return (
         <LanguageContext.Provider value={{ language, setLanguage, t }}>
