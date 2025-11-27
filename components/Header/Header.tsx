@@ -36,7 +36,7 @@ const Header = () => {
                     <div className={css.logo}>
                         <Link href="/" aria-label="Bender Robots Home">
                             <Image
-                                src="/logo.svg"
+                                src="../../public/img/Logo.png"
                                 alt="Bender Robots Logo"
                                 width={150}
                                 height={50}
