@@ -49,6 +49,15 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             step3: 'Максимальна прохідність у будь-якій місцевості',
             step4: 'Повністю українська команда та виробництво 🇺🇦',
         },
+                forWhom: {
+            sectionTitle: 'ДЛЯ КОГО МИ ПРАЦЮЄМО',
+            heading: 'Для кого ми працюємо',
+            category1: 'Підрозділи ЗСУ',
+            category2: 'Тактичні групи ТРО',
+            category3: 'Волонтерські фонди',
+            category4: 'Військові медики',
+            category5: 'Логістичні команди на фронті',
+        },
     },
     en: {
         header: {
@@ -91,6 +100,15 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             step2: 'Proprietary navigation, modularity, and security technologies',
             step3: 'Maximum cross-country capability in any terrain',
             step4: 'Fully Ukrainian team and production 🇺🇦',
+        },
+                forWhom: {
+            sectionTitle: 'WHO WE WORK FOR',
+            heading: 'Who We Work For',
+            category1: 'Armed Forces Units',
+            category2: 'Tactical Defense Groups',
+            category3: 'Volunteer Funds',
+            category4: 'Military Medics',
+            category5: 'Frontline Logistics Teams',
         },
     },
 };

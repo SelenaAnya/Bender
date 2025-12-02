@@ -3,6 +3,7 @@
 import Header from '@/components/Header/Header';
 import About_Us from '@/components/About_Us/About_us';
 import OurSteps from '@/components/Our_steps/Our_steps';
+import ForWhom from '@/components/For_whom/For_whom';
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import styles from './page.module.css';
@@ -46,8 +47,8 @@ export default function Home() {
         {/* About Us Section */}
         <About_Us />
 
-        {/* Products Sections */}
-        {/* ... */}
+        {/* For Whom Section */}
+        <ForWhom />
       </main>
     </>
   );
