@@ -15,20 +15,6 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             subtitle: 'Передові технології роботизації',
             description: 'Ми створюємо майбутнє разом з вами',
         },
-        products: {
-            bender2: {
-                title: 'Bender 2.0',
-                description: 'Найсучасніший робот для ваших потреб',
-            },
-            benderM: {
-                title: 'Bender-M',
-                description: 'Середній клас роботів',
-            },
-            benderL: {
-                title: 'Bender-L',
-                description: 'Великий робот для складних завдань',
-            },
-        },
         common: {
             learnMore: 'Дізнатися більше',
             contactUs: 'Зв\'яжіться з нами',
@@ -58,6 +44,28 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             category4: 'Військові медики',
             category5: 'Логістичні команди на фронті',
         },
+            products: {
+        sectionTitle: 'ЛІНІЙКА ПРОДУКТІВ',
+        heading: 'Лінійка продуктів',
+        button: 'Переглянути →',
+        bender2: {
+            name: 'Bender-2.0',
+            title: 'Bender 2.0',
+            description: 'Автономний наземний робот, призначений для безпечної доставки вантажів у зону бойових дій. Пересування по бездоріжжю, високоточна навігація та здатність до автономного повернення та віддалення від оператора',
+            feature1: 'Завантаження до 250 кг, оптимальна швидкість, можливість тягнути причіп, LTE та радіоканал',
+            feature2: 'Дальність дії 7ОГ: 5 км, що залежить від місцевості та перешкод. LTE: 15 км радіоконал',
+            feature3: 'Автономна робота до 60 км',
+            feature4: 'Дистанційне керування у будь-який час',
+        },
+    benderM: {
+        title: 'Bender-M',
+        description: 'Середній клас роботів',
+    },
+    benderL: {
+        title: 'Bender-L',
+        description: 'Великий робот для складних завдань',
+    },
+},
     },
     en: {
         header: {
@@ -73,20 +81,6 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             subtitle: 'Advanced Robotics Technologies',
             description: 'We create the future together with you',
         },
-        products: {
-            bender2: {
-                title: 'Bender 2.0',
-                description: 'The most advanced robot for your needs',
-            },
-            benderM: {
-                title: 'Bender-M',
-                description: 'Medium class robots',
-            },
-            benderL: {
-                title: 'Bender-L',
-                description: 'Large robot for complex tasks',
-            },
-        },
         common: {
             learnMore: 'Learn More',
             contactUs: 'Contact Us',
@@ -101,7 +95,7 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             step3: 'Maximum cross-country capability in any terrain',
             step4: 'Fully Ukrainian team and production 🇺🇦',
         },
-                forWhom: {
+        forWhom: {
             sectionTitle: 'WHO WE WORK FOR',
             heading: 'Who We Work For',
             category1: 'Armed Forces Units',
@@ -109,6 +103,28 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             category3: 'Volunteer Funds',
             category4: 'Military Medics',
             category5: 'Frontline Logistics Teams',
+        },
+        products: {
+            sectionTitle: 'PRODUCT LINE',
+            heading: 'Product Line',
+            button: 'View →',
+            bender2: {
+                name: 'Bender-2.0',
+                title: 'Bender 2.0',
+                description: 'Autonomous ground robot designed for safe cargo delivery to combat zones. Off-road movement, high-precision navigation, and autonomous return capability away from operator',
+                feature1: 'Load capacity up to 250 kg, optimal speed, trailer towing capability, LTE and radio channel',
+                feature2: 'Radio range: 5 km depending on terrain and obstacles. LTE: 15 km radio channel',
+                feature3: 'Autonomous operation up to 60 km',
+                feature4: 'Remote control at any time',
+            },
+            benderM: {
+                title: 'Bender-M',
+                description: 'Medium class robots',
+            },
+            benderL: {
+                title: 'Bender-L',
+                description: 'Large robot for complex tasks',
+            },
         },
     },
 };
