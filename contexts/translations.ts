@@ -41,6 +41,14 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             description1: 'З початку повномасштабного вторгнення ми розробляємо бойові автономні системи, здатні працювати там, де небезпечно людині: на передовій, у зоні РЕБ, під обстрілами.',
             description2: 'Наша мета — зробити ЗСУ технологічно сильнішими.',
         },
+        ourSteps: {
+            sectionTitle: 'НАШ ПІДХІД',
+            heading: 'Наш підхід',
+            step1: 'Розробка на основі зворотного зв\'язку від фронту',
+            step2: 'Власні технології навігації, модульності, безпеки',
+            step3: 'Максимальна прохідність у будь-якій місцевості',
+            step4: 'Повністю українська команда та виробництво 🇺🇦',
+        },
     },
     en: {
         header: {
@@ -75,6 +83,14 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             contactUs: 'Contact Us',
             menu: 'Menu',
             close: 'Close',
+        },
+        ourSteps: {
+            sectionTitle: 'OUR APPROACH',
+            heading: 'Our Approach',
+            step1: 'Development based on frontline feedback',
+            step2: 'Proprietary navigation, modularity, and security technologies',
+            step3: 'Maximum cross-country capability in any terrain',
+            step4: 'Fully Ukrainian team and production 🇺🇦',
         },
     },
 };
