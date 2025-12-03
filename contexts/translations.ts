@@ -100,7 +100,21 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
     quote8: 'Навчання зайняло 20 хвилин. Керується як ґрашка, але працює як танк.',
     author8: 'Ігор ************',
     role8: 'Боєць БПЛА',
-},
+        },
+            footer: {
+                heading: 'Зв\'яжіться з командою BENDER ROBOTS',
+                description: 'Напишіть нам — і ми надішлемо детальну інформацію про рішення та умови постави.',
+                email: 'Email',
+                copyEmail: 'Копіювати email',
+                nameLabel: 'Ім\'я',
+                emailLabel: 'Ваш Email',
+                phoneLabel: 'Телефон',
+                submitButton: 'Отримати презентацію',
+                copyright: '2025 BENDER ROBOTS. Усі права захищено.',
+                privacyLink: 'Політика',
+                termsLink: 'Ліцензія',
+        },
+            
     },
     en: {
         header: {
@@ -162,39 +176,53 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             },
         },
         testimonials: {
-    sectionTitle: 'FRONTLINE FEEDBACK',
-    heading: 'Frontline Feedback',
-    quote1: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
-    author1: 'Volodymyr ************',
-    role1: 'Company Commander, Eastern Direction',
-    
-    quote2: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
-    author2: 'Volodymyr ************',
-    role2: 'Company Commander, Eastern Direction',
-    
-    quote3: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
-    author3: 'Ihor ************',
-    role3: 'UAV Fighter',
-    
-    quote4: 'BENDER allows us to do with EW what we could only dream of before. Nobody risks unnecessarily, and cargo needs to be moved without errors.',
-    author4: 'Oleh *******',
-    role4: 'Engineering Troops Officer',
-    
-    quote5: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
-    author5: 'Ihor ************',
-    role5: 'UAV Fighter',
-    
-    quote6: 'BENDER allows us to do with EW what we could only dream of before. Nobody risks unnecessarily, and cargo needs to be moved without errors.',
-    author6: 'Oleh *******',
-    role6: 'Engineering Troops Officer',
-    
-    quote7: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
-    author7: 'Volodymyr ************',
-    role7: 'Company Commander, Eastern Direction',
-    
-    quote8: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
-    author8: 'Ihor ************',
-    role8: 'UAV Fighter',
-},
+            sectionTitle: 'FRONTLINE FEEDBACK',
+            heading: 'Frontline Feedback',
+            quote1: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
+            author1: 'Volodymyr ************',
+            role1: 'Company Commander, Eastern Direction',
+            
+            quote2: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
+            author2: 'Volodymyr ************',
+            role2: 'Company Commander, Eastern Direction',
+            
+            quote3: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
+            author3: 'Ihor ************',
+            role3: 'UAV Fighter',
+            
+            quote4: 'BENDER allows us to do with EW what we could only dream of before. Nobody risks unnecessarily, and cargo needs to be moved without errors.',
+            author4: 'Oleh *******',
+            role4: 'Engineering Troops Officer',
+            
+            quote5: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
+            author5: 'Ihor ************',
+            role5: 'UAV Fighter',
+            
+            quote6: 'BENDER allows us to do with EW what we could only dream of before. Nobody risks unnecessarily, and cargo needs to be moved without errors.',
+            author6: 'Oleh *******',
+            role6: 'Engineering Troops Officer',
+            
+            quote7: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
+            author7: 'Volodymyr ************',
+            role7: 'Company Commander, Eastern Direction',
+            
+            quote8: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
+            author8: 'Ihor ************',
+            role8: 'UAV Fighter',
+        },
+        footer: {
+            heading: 'Get in Touch with BENDER ROBOTS Team',
+            description: 'Write to us — and we will send you detailed information about solutions and delivery terms.',
+            email: 'Email',
+            copyEmail: 'Copy email',
+            nameLabel: 'Name',
+            emailLabel: 'Your Email',
+            phoneLabel: 'Phone',
+            submitButton: 'Get Presentation',
+            copyright: '2025 BENDER ROBOTS. All rights reserved.',
+            privacyLink: 'Privacy',
+            termsLink: 'License',
+        },
+        
     },
 };
