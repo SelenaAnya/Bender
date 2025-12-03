@@ -57,14 +57,49 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             feature3: 'Автономна робота до 60 км',
             feature4: 'Дистанційне керування у будь-який час',
         },
-    benderM: {
-        title: 'Bender-M',
-        description: 'Середній клас роботів',
-    },
-    benderL: {
-        title: 'Bender-L',
-        description: 'Великий робот для складних завдань',
-    },
+            benderM: {
+                title: 'Bender-M',
+                description: 'Середній клас роботів',
+            },
+            benderL: {
+                title: 'Bender-L',
+                description: 'Великий робот для складних завдань',
+            },
+        },
+            testimonials: {
+    sectionTitle: 'ВІДГУКИ З ФРОНТУ',
+    heading: 'Відгуки з фронту',
+    quote1: 'Ми використовуємо BENDER-2.0 під час ротації — платформа доставляла боєкомплект учні. Без неї ризик був би максимальний.',
+    author1: 'Володимир ************',
+    role1: 'Командир роти, Східний напрямок',
+    
+    quote2: 'Ми використовуємо BENDER-2.0 під час ротації — платформа доставляла боєкомплект учні. Без неї ризик був би максимальний.',
+    author2: 'Володимир ************',
+    role2: 'Командир роти, Східний напрямок',
+    
+    quote3: 'Наглядна зайнято 20 хвилин. Керується як ґрашка, але працює як танк.',
+    author3: 'Ігор ************',
+    role3: 'Боєць БПЛА',
+    
+    quote4: 'BENDER дозволяє нам зробити РЕБ те, про що раніше лише мріяли. Ніхто не ризикує просто так, а вантаж потрібно перекинути без помилок.',
+    author4: 'Олег *******',
+    role4: 'Офіцер інженерних військ',
+    
+    quote5: 'Навчання зайняло 20 хвилин. Керується як ґрашка, але працює як танк.',
+    author5: 'Ігор ************',
+    role5: 'Боєць БПЛА',
+    
+    quote6: 'BENDER дозволяє нам зробити РЕБ те, про що раніше лише мріяли. Ніхто не ризикує просто так, а вантаж потрібно перекинути без помилок.',
+    author6: 'Олег *******',
+    role6: 'Офіцер інженерних військ',
+    
+    quote7: 'Ми використовуємо BENDER-2.0 під час ротації — платформа доставляла боєкомплект учні. Без неї ризик був би максимальний.',
+    author7: 'Володимир ************',
+    role7: 'Командир роти, Східний напрямок',
+    
+    quote8: 'Навчання зайняло 20 хвилин. Керується як ґрашка, але працює як танк.',
+    author8: 'Ігор ************',
+    role8: 'Боєць БПЛА',
 },
     },
     en: {
@@ -126,5 +161,40 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
                 description: 'Large robot for complex tasks',
             },
         },
+        testimonials: {
+    sectionTitle: 'FRONTLINE FEEDBACK',
+    heading: 'Frontline Feedback',
+    quote1: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
+    author1: 'Volodymyr ************',
+    role1: 'Company Commander, Eastern Direction',
+    
+    quote2: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
+    author2: 'Volodymyr ************',
+    role2: 'Company Commander, Eastern Direction',
+    
+    quote3: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
+    author3: 'Ihor ************',
+    role3: 'UAV Fighter',
+    
+    quote4: 'BENDER allows us to do with EW what we could only dream of before. Nobody risks unnecessarily, and cargo needs to be moved without errors.',
+    author4: 'Oleh *******',
+    role4: 'Engineering Troops Officer',
+    
+    quote5: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
+    author5: 'Ihor ************',
+    role5: 'UAV Fighter',
+    
+    quote6: 'BENDER allows us to do with EW what we could only dream of before. Nobody risks unnecessarily, and cargo needs to be moved without errors.',
+    author6: 'Oleh *******',
+    role6: 'Engineering Troops Officer',
+    
+    quote7: 'We use BENDER-2.0 during rotation — the platform delivered ammunition without issue. Without it, the risk would have been maximum.',
+    author7: 'Volodymyr ************',
+    role7: 'Company Commander, Eastern Direction',
+    
+    quote8: 'Training took 20 minutes. Controlled like a toy, but works like a tank.',
+    author8: 'Ihor ************',
+    role8: 'UAV Fighter',
+},
     },
 };

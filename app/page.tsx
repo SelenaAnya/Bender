@@ -4,7 +4,8 @@ import Header from '@/components/Header/Header';
 import About_Us from '@/components/About_Us/About_us';
 import OurSteps from '@/components/Our_steps/Our_steps';
 import ForWhom from '@/components/For_whom/For_whom';
-import Products from '@/components/Products/Products'; // ДОДАТИ ЦЕЙ ІМПОРТ
+import Products from '@/components/Products/Products';
+import Testimonials from '@/components/Testimonials/Testimonials'; // ДОДАТИ ЦЕЙ ІМПОРТ
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import styles from './page.module.css';
@@ -46,11 +47,14 @@ export default function Home() {
         {/* About Us Section */}
         <About_Us />
 
-        {/* Products Section - ДОДАТИ ЦЮ СЕКЦІЮ */}
+        {/* Products Section */}
         <Products />
 
         {/* For Whom Section */}
         <ForWhom />
+
+        {/* Testimonials Section - ДОДАТИ ЦЮ СЕКЦІЮ */}
+        <Testimonials />
       </main>
     </>
   );
