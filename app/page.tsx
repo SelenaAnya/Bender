@@ -6,7 +6,7 @@ import OurSteps from '@/components/Our_steps/Our_steps';
 import ForWhom from '@/components/For_whom/For_whom';
 import Products from '@/components/Products/Products';
 import Testimonials from '@/components/Testimonials/Testimonials';
-import Footer from '@/components/Footer/Footer'; // ДОДАТИ ЦЕЙ ІМПОРТ
+import Footer from '@/components/Footer/Footer'; 
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import styles from './page.module.css';
@@ -36,7 +36,7 @@ export default function Home() {
                 {t('header.getPresentation')}
               </button>
               <button className={styles.secondaryButton}>
-                {t('common.learnMore')} <span aria-hidden="true">→</span>
+                {t('common.learnMore')} 
               </button>
             </div>
           </div>
