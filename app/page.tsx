@@ -21,13 +21,13 @@ export default function Home() {
 
       <Hero />
       <main className={styles.main}>
-        {/* Hero Section */}
+          {/* Hero Section */}
+          
+        {/* About Us Section */}
+        <About_Us />
 
         {/* Our Steps Section */}
         <OurSteps />
-
-        {/* About Us Section */}
-        <About_Us />
 
         {/* Products Section */}
         <Products />
