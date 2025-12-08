@@ -1,4 +1,4 @@
-/* Main container */
+/* Main container
 .main {
     min-height: 100dvh;
     background-color: rgb(249 250 251);
@@ -9,7 +9,7 @@
 }
 
 /* Hero Section */
-.heroSection {
+/*.heroSection {
     background-image: url(../public/img/IMG_8760\ 1@2x.jpg);
     background-size: cover;
     background-position: center;
@@ -143,7 +143,7 @@
 }
 
 /* Products Section */
-.productSection {
+/*.productSection {
     max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
@@ -215,7 +215,7 @@
 }
 
 /* Contact Section */
-.contactSection {
+/*.contactSection {
     background-color: #ff6b35;
     padding: 4rem 0;
     margin-top: 4rem;
@@ -267,4 +267,4 @@
 
 .contactButton:hover {
     background-color: rgb(243 244 246);
-}
+} */
