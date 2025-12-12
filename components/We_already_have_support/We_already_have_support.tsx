@@ -77,12 +77,10 @@ const WeAlreadyHaveSupport = () => {
                             onMouseLeave={() => setHoveredCard(null)}
                         >
                             <div className={styles.logoWrapper}>
-                                <Image
+                                <img
                                     src={unit.logo}
                                     alt={t(unit.nameKey)}
-                                    fill
                                     className={styles.logo}
-                                    style={{ objectFit: 'contain' }}
                                 />
                             </div>
                             <span className={styles.unitName}>{t(unit.nameKey)}</span>

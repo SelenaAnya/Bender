@@ -143,13 +143,17 @@
     filter: brightness(0) invert(1);
     opacity: 0.85;
     transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logoCard:hover .logo,
 .logoCardHover .logo {
     opacity: 1;
     filter: brightness(0) invert(1);
-    transform: scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 .unitName {
