@@ -5,6 +5,7 @@ import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero/Hero'
 import About_Us from '@/components/About_Us/About_us';
 import OurSteps from '@/components/Our_steps/Our_steps';
+import WeAlreadyHaveSupport from '@/components/We_already_have_support/We_already_have_support';
 import ForWhom from '@/components/For_whom/For_whom';
 import Products from '@/components/Products/Products';
 import Testimonials from '@/components/Testimonials/Testimonials';
@@ -20,8 +21,9 @@ export default function Home() {
         <Hero />
         <main className={styles.main}>
           <About_Us />
-          <OurSteps />
           <Products />
+          <OurSteps />
+          <WeAlreadyHaveSupport />
           <ForWhom />
           <Testimonials />
         </main>

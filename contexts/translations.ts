@@ -34,7 +34,20 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             step3: 'Максимальна прохідність у будь-якій місцевості',
             step4: 'Повністю українська команда та виробництво 🇺🇦',
         },
-                forWhom: {
+
+        support: {
+            heading: 'Нас вже підтримують:',
+            description: 'Ми активно співпрацюємо з бойовими підрозділами для адаптації платформи до реальних умов.',
+            unit1: '3 прикордонний загін ім. Героя України Євгена Пікуса «Помста»',
+            unit2: '4 прикордонний загін РубПАК «Стрікс»',
+            unit3: '10 мобільний прикордонний загін ДПСУ «Дозор»',
+            unit4: '6 прикордонний Волинський загін',
+            unit5: '3 ОШБр',
+            unit6: '4 бригада оперативного призначення НГУ «Рубіж»',
+            unit7: '108-й окремий штурмовий батальон «Вовки Да Вінчі»',
+            unit8: '13 бригада НГУ Хартія',
+        },
+        forWhom: {
             sectionTitle: 'ДЛЯ КОГО МИ ПРАЦЮЄМО',
             heading: 'Для кого ми працюємо',
             category1: 'Підрозділи ЗСУ',
@@ -143,6 +156,18 @@ export const translations: Record<'uk' | 'en', Record<string, TranslationValue>>
             step2: 'Proprietary navigation, modularity, and security technologies',
             step3: 'Maximum cross-country capability in any terrain',
             step4: 'Fully Ukrainian team and production 🇺🇦',
+        },
+        support: {
+            heading: 'Already supporting us:',
+            description: 'We actively cooperate with combat units to adapt the platform to real conditions.',
+            unit1: '3rd Border Guard Unit named after Hero of Ukraine Yevhen Pikus "Pomsta"',
+            unit2: '4th Border Guard Unit RubPAK "Striks"',
+            unit3: '10th Mobile Border Guard Unit SBGS "Dozor"',
+            unit4: '6th Border Guard Volyn Unit',
+            unit5: '3 OShBr',
+            unit6: '4th Operational Brigade NGU "Rubizh"',
+            unit7: '108th Separate Assault Battalion "Wolves of Da Vinci"',
+            unit8: '13th Brigade NGU Khartia',
         },
         forWhom: {
             sectionTitle: 'WHO WE WORK FOR',
