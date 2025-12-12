@@ -18,6 +18,7 @@ const Products = () => {
                 'products.bender2.feature3',
                 'products.bender2.feature4',
             ],
+            sizeBadge: '1520 Fill x 384 Hug',
             isFeatured: true,
         },
         {
@@ -44,30 +45,6 @@ const Products = () => {
             ],
             isFeatured: false,
         },
-        {
-            id: 4,
-            nameKey: 'products.bender2.name',
-            descriptionKey: 'products.bender2.description',
-            features: [
-                'products.bender2.feature1',
-                'products.bender2.feature2',
-                'products.bender2.feature3',
-                'products.bender2.feature4',
-            ],
-            isFeatured: false,
-        },
-        {
-            id: 5,
-            nameKey: 'products.bender2.name',
-            descriptionKey: 'products.bender2.description',
-            features: [
-                'products.bender2.feature1',
-                'products.bender2.feature2',
-                'products.bender2.feature3',
-                'products.bender2.feature4',
-            ],
-            isFeatured: false,
-        },
     ];
 
     return (
@@ -75,60 +52,54 @@ const Products = () => {
             <div className={styles.container}>
                 {/* Header */}
                 <div className={styles.header}>
-                    {/* <div className={styles.titleWrapper}>
-                        {/* <svg
-                            className={styles.icon}
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg> 
-                        <h2 className={styles.title}>{t('products.sectionTitle')}</h2>
-                    </div> */}
                     <h3 className={styles.heading}>{t('products.heading')}</h3>
                 </div>
 
-                {/* Products Grid */}
-                <div className={styles.grid}>
+                {/* Products List */}
+                <div className={styles.productsList}>
                     {products.map((product) => (
                         <div
                             key={product.id}
                             className={`${styles.card} ${product.isFeatured ? styles.cardFeatured : ''}`}
                         >
-                            {/* Product Image */}
-                            <div className={styles.imageWrapper}>
-                                <div className={styles.imagePlaceholder}></div>
-                            </div>
+                            <div className={styles.cardContent}>
+                                {/* Image Section */}
+                                <div className={styles.imageSection}>
+                                    <div className={styles.imageWrapper}>
+                                        <div className={styles.imagePlaceholder}></div>
+                                    </div>
+                                    {product.sizeBadge && (
+                                        <div className={styles.sizeBadge}>
+                                            {product.sizeBadge}
+                                        </div>
+                                    )}
+                                </div>
 
-                            {/* Product Content */}
-                            <div className={styles.content}>
-                                <h4 className={styles.productName}>
-                                    {t(product.nameKey)}
-                                </h4>
-                                <p className={styles.description}>
-                                    {t(product.descriptionKey)}
-                                </p>
+                                {/* Text Section */}
+                                <div className={styles.textSection}>
+                                    <h4 className={styles.productName}>
+                                        {t(product.nameKey)}
+                                    </h4>
+                                    <p className={styles.description}>
+                                        {t(product.descriptionKey)}
+                                    </p>
 
-                                {/* Features List */}
-                                <ul className={styles.featuresList}>
-                                    {product.features.map((featureKey, index) => (
-                                        <li key={index} className={styles.featureItem}>
-                                            <span className={styles.checkmark}>✓</span>
-                                            <span>{t(featureKey)}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                                    {/* Features Grid */}
+                                    <div className={styles.featuresGrid}>
+                                        {product.features.map((featureKey, index) => (
+                                            <div key={index} className={styles.featureItem}>
+                                                <span className={styles.checkmark}>✓</span>
+                                                <span>{t(featureKey)}</span>
+                                            </div>
+                                        ))}
+                                    </div>
 
-                                {/* Button */}
-                                <button className={styles.button}>
-                                    {t('products.button')}
-                                </button>
+                                    {/* Button */}
+                                    <button className={styles.button}>
+                                        <span>{t('products.button')}</span>
+                                        <span className={styles.arrow}>→</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))}
