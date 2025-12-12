@@ -56,3 +56,4 @@ export const TRANSLATIONS = {
         toggleMenu: 'Toggle menu',
     },
 };
+

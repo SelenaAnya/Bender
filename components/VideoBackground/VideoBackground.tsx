@@ -15,8 +15,8 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({
     children 
 }) => {
     return (
-        <div className={styles.container}>
-            <div className={styles.videoWrapper}>
+        <div className={styles.wrapper}>
+            <div className={styles.videoContainer}>
                 <video
                     className={styles.video}
                     autoPlay

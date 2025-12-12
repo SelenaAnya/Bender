@@ -1,3 +1,4 @@
+/* page.tsx */
 'use client';
 
 import Header from '@/components/Header/Header';
@@ -13,35 +14,19 @@ import VideoBackground from '@/components/VideoBackground/VideoBackground';
 
 export default function Home() {
   return (
-
-        <VideoBackground videoSrc="/public/img/bgs.mp4" opacity={0.4}>
-  <>
-
-      <Header />
-
-      <Hero />
-      <main className={styles.main}>
-          {/* Hero Section */}
-          
-        {/* About Us Section */}
-        <About_Us />
-
-        {/* Our Steps Section */}
-        <OurSteps />
-
-        {/* Products Section */}
-        <Products />
-
-        {/* For Whom Section */}
-        <ForWhom />
-
-        {/* Testimonials Section */}
-        <Testimonials />
-      </main>
-
-      {/* Footer Section - ДОДАТИ ЦЮ СЕКЦІЮ */}
-      <Footer />
-    </>
-        </VideoBackground>
+    <VideoBackground videoSrc="/img/bgs.mp4" opacity={0.6}>
+      <>
+        <Header />
+        <Hero />
+        <main className={styles.main}>
+          <About_Us />
+          <OurSteps />
+          <Products />
+          <ForWhom />
+          <Testimonials />
+        </main>
+        <Footer />
+      </>
+    </VideoBackground>
   );
 }

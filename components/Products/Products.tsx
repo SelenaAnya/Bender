@@ -75,8 +75,8 @@ const Products = () => {
             <div className={styles.container}>
                 {/* Header */}
                 <div className={styles.header}>
-                    <div className={styles.titleWrapper}>
-                        <svg
+                    {/* <div className={styles.titleWrapper}>
+                        {/* <svg
                             className={styles.icon}
                             viewBox="0 0 24 24"
                             fill="none"
@@ -88,9 +88,9 @@ const Products = () => {
                                 strokeWidth={2}
                                 d="M4 6h16M4 12h16M4 18h16"
                             />
-                        </svg>
+                        </svg> 
                         <h2 className={styles.title}>{t('products.sectionTitle')}</h2>
-                    </div>
+                    </div> */}
                     <h3 className={styles.heading}>{t('products.heading')}</h3>
                 </div>
 

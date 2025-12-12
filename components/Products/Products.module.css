@@ -1,11 +1,11 @@
 .section {
     padding: 4rem 1rem;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 @media (prefers-color-scheme: dark) {
     .section {
-        background-color: #0a0a0a;
+        background-color: #0a0a0a0a;
     }
 }
 
@@ -20,19 +20,6 @@
     margin-bottom: 0.5rem;
 }
 
-.icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #ff6b35;
-}
-
-.title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ff6b35;
-}
 
 .heading {
     font-size: 1.875rem;
@@ -55,8 +42,8 @@
 
 /* Products Grid */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
@@ -80,9 +67,12 @@
 
 /* Product Card */
 .card {
-    background-color: #f9fafb;
+    width: 1520px;
+    height: 384px;
+    /* background-color: #f9fafb; */
     border-radius: 0.75rem;
     overflow: hidden;
+    gap: 80px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }

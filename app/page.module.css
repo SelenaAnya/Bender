@@ -1,5 +1,4 @@
-/* Main container
-.main {
+Main container .main {
     min-height: 100dvh;
     background-color: rgb(249 250 251);
 }
@@ -7,6 +6,7 @@
 .main:global(.dark) {
     background-color: rgb(24 24 27);
 }
+
 
 /* Hero Section */
 /*.heroSection {
