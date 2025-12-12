@@ -19,27 +19,27 @@ const WeAlreadyHaveSupport = () => {
         {
             id: 1,
             nameKey: 'support.unit1',
-            logo: '/logos/unit1.svg',
+            logo: '../../public/svg/logo/pomsta.svg',
         },
         {
             id: 2,
             nameKey: 'support.unit2',
-            logo: '/logos/unit2.svg',
+            logo: '../../public/svg/logo/stricks.svg',
         },
         {
             id: 3,
             nameKey: 'support.unit3',
-            logo: '/logos/unit3.svg',
+            logo: '../../public/svg/logo/dozor.svg',
         },
         {
             id: 4,
             nameKey: 'support.unit4',
-            logo: '/logos/unit4.svg',
+            logo: '../../public/svg/logo/',
         },
         {
             id: 5,
             nameKey: 'support.unit5',
-            logo: '/logos/unit5.svg',
+            logo: '../../public/svg/logo/,
         },
         {
             id: 6,
