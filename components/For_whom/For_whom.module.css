@@ -1,6 +1,8 @@
 .section {
-    padding: 4rem 1rem;
-    /* background-color: #0a0a0a; */
+    max-width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
     color: #ffffff;
 }
 
@@ -9,12 +11,12 @@
 }
 
 .title {
-    font-size: 0.875rem;
+    font-size: 48px;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
     text-transform: uppercase;
-    color: #ff6b35;
-    margin-bottom: 0.5rem;
+    color: (--text-title);
+    margin-bottom: 40px;
 }
 
 .heading {
@@ -32,12 +34,11 @@
 
 /* Grid Layout */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (min-width: 640px) {
+ @media (min-width: 640px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -47,13 +48,13 @@
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
-}
+} 
 
 /* Card Styles */
 .card {
+    max-width: 288px;
     position: relative;
-    height: 320px;
-    border-radius: 0.75rem;
+    height: 260px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -119,7 +120,7 @@
     }
 
     .card {
-        height: 360px;
+        height: 260px;
     }
 }
 

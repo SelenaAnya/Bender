@@ -1,5 +1,8 @@
 .header {
-    background-color: #1a1a1a;
+    max-width: 115rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12.5rem;
     color: white;
     position: sticky;
     top: 0;

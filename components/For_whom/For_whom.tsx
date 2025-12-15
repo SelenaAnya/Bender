@@ -34,10 +34,11 @@ const ForWhom = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <h2 className={styles.title}>{t('forWhom.sectionTitle')}</h2>
+                <h2 className={styles.title}>{t('forWhom.sectionTitle')}</h2>
+                {/* <div className={styles.header}>
+                    
                     <h3 className={styles.heading}>{t('forWhom.heading')}</h3>
-                </div>
+                </div> */}
 
                 <div className={styles.grid}>
                     {categories.map((category, index) => (

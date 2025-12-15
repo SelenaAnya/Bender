@@ -1,0 +1,236 @@
+.section {
+    max-width: 95rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 1rem;
+    /* background: linear-gradient(180deg, rgba(10, 10, 10, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%); */
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+}
+
+.container {
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+}
+
+.description {
+    font-size: 1rem;
+    color: #9ca3af;
+    max-width: 42rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1.125rem;
+    }
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4rem;
+    }
+}
+
+/* Logo Card */
+.logoCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(135deg, rgba(42, 42, 42, 0.6) 0%, rgba(26, 26, 26, 0.8) 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.logoCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logoCard:hover,
+.logoCardHover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 107, 53, 0.5);
+    box-shadow: 0 12px 32px rgba(255, 107, 53, 0.2);
+}
+
+.logoCard:hover::before,
+.logoCardHover::before {
+    opacity: 1;
+}
+
+.logoWrapper {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logoCard:hover .logo,
+.logoCardHover .logo {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.unitName {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .unitName {
+        font-size: 0.8125rem;
+    }
+}
+
+/* Additional Row */
+.additionalRow {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+@media (min-width: 640px) {
+    .additionalRow {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .additionalRow {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+    .section {
+        padding: 8rem 2rem;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    .logoCard {
+        height: 160px;
+    }
+
+    .logoWrapper {
+        height: 90px;
+    }
+}
+
+@media (max-width: 374px) {
+    .grid {
+        gap: 1.5rem;
+    }
+
+    .logoCard {
+        height: 120px;
+        padding: 1rem;
+    }
+
+    .logoWrapper {
+        height: 70px;
+    }
+}
