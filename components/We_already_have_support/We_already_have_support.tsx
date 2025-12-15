@@ -19,7 +19,11 @@ const WeAlreadyHaveSupport = () => {
         {
             id: 1,
             nameKey: 'support.unit1',
+<<<<<<< HEAD
             logo: '/svg/logo/rybij.svg',
+=======
+            logo: '/logos/unit1.svg',
+>>>>>>> c9d3c38f2ab172f468461094ceac4325f48f676d
         },
         {
             id: 2,

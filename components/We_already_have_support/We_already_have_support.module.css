@@ -1,7 +1,10 @@
 .section {
+<<<<<<< HEAD
     max-width: 95rem;
     margin-left: auto;
     margin-right: auto;
+=======
+>>>>>>> c9d3c38f2ab172f468461094ceac4325f48f676d
     padding: 6rem 1rem;
     /* background: linear-gradient(180deg, rgba(10, 10, 10, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%); */
     color: #ffffff;
