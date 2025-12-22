@@ -103,7 +103,7 @@ const WeAlreadyHaveSupport = () => {
                                     className={styles.logo}
                                 />
                             </div>
-                            <span className={styles.unitName}>{t(unit.nameKey)}</span>
+                            <div className={styles.unitName}>{t(unit.nameKey)}</div>
                         </div>
                     ))}
                 </div>
