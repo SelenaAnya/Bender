@@ -16,7 +16,6 @@ const Header = () => {
 
     const handleLanguageChange = (lang: 'uk' | 'en') => {
         setLanguage(lang);
-        // Закриваємо мобільне меню після вибору мови
         if (isMenuOpen) {
             setIsMenuOpen(false);
         }
@@ -36,10 +35,10 @@ const Header = () => {
                     <div className={css.logo}>
                         <Link href="/" aria-label="Bender Robots Home">
                             <Image
-                                src="../../public/svg/logo.svg"
+                                src="/svg/logo.svg"
                                 alt="Bender Robots Logo"
                                 width={150}
-                                height={50}
+                                height={48}
                                 className={css.logoImage}
                                 priority
                             />
