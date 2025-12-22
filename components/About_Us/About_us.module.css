@@ -9,18 +9,18 @@
     margin: 0 auto;
 }
 
-.content {
+/* Головний контейнер для відео та тексту */
+.videoGrid {
     display: grid;
-    gap: 3rem;
     grid-template-columns: 1fr;
+    gap: 3rem;
     align-items: start;
 }
 
-/* 2 колонки починаються з 1200px */
+/* 2 колонки починаються з 1024px */
 @media (min-width: 1024px) {
-    .aboutSection {
-        display: grid;
-        grid-template-columns: 2fr;
+    .videoGrid {
+        grid-template-columns: 1fr 1fr;
         gap: 5rem;
         align-items: center;
     }
@@ -100,7 +100,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .heading {
         font-size: 3rem;
     }
@@ -119,13 +119,13 @@
     }
 }
 
-/* Mobile - вертикальний стек (до 1200px) */
-@media (max-width: 1199px) {
+/* Mobile - вертикальний стек (до 1024px) */
+@media (max-width: 1023px) {
     .aboutSection {
         padding: 4rem 1rem;
     }
 
-    .content {
+    .videoGrid {
         gap: 2.5rem;
     }
 
@@ -135,12 +135,12 @@
 }
 
 /* Tablet - все ще вертикальний стек, але більші відступи */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .aboutSection {
         padding: 5rem 2rem;
     }
 
-    .content {
+    .videoGrid {
         gap: 3rem;
     }
 }
@@ -164,8 +164,8 @@
     }
 }
 
-/* Desktop - 2 колонки з 1200px */
-@media (min-width: 1200px) {
+/* Desktop - 2 колонки з 1024px */
+@media (min-width: 1024px) {
     .aboutSection {
         padding: 8rem 2rem;
     }
@@ -181,7 +181,7 @@
         padding: 8rem 3rem;
     }
 
-    .content {
+    .videoGrid {
         gap: 6rem;
     }
 }
