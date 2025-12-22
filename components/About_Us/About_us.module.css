@@ -1,42 +1,54 @@
-/* .aboutSection {
-    padding: 4rem 1rem;
-    background-color: #ffffff; 
+.aboutSection {
+    padding: 6rem 1rem;
+    background-color: transparent;
+    color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-    .aboutSection {
-        background-color: #0a0a0a; 
-    }
-} */
-
-
+.container {
+    max-width: 1520px;
+    margin: 0 auto;
+}
 
 .content {
     display: grid;
     gap: 3rem;
-}
-
-/* Video Grid */
-.videoGrid {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    align-items: start;
 }
 
-@media (min-width: 640px) {
-    .videoGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+/* 2 колонки починаються з 1200px */
+@media (min-width: 1024px) {
+    .aboutSection {
+        display: grid;
+        grid-template-columns: 2fr;
+        gap: 5rem;
+        align-items: center;
     }
+}
+
+/* Video Section - Left side on desktop, top on mobile */
+.videoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 
 .videoItem {
     position: relative;
     aspect-ratio: 16 / 9;
-    border-radius: 0.75rem;
+    border-radius: 1rem;
     overflow: hidden;
-    background-color: #000;
+    background-color: #1a1a1a;
     cursor: pointer;
+    border: 2px solid #2a2a2a;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.videoItem:hover {
+    border-color: #ffffff;
+    transform: scale(1.02);
 }
 
 .video {
@@ -54,6 +66,11 @@
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.videoItem:hover .playButton {
     opacity: 0.9;
 }
 
@@ -62,51 +79,38 @@
     opacity: 1;
 }
 
-/* Text Content */
+/* Text Content - Right side on desktop, bottom on mobile */
 .textContent {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-}
-
-.title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ff6b35;
+    gap: 2rem;
 }
 
 .heading {
-    font-size: 1.875rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #1a1a1a;
-}
-
-@media (prefers-color-scheme: dark) {
-    .heading {
-        color: #ffffff;
-    }
+    color: #ffffff;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
     .heading {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .heading {
+        font-size: 3rem;
     }
 }
 
 .description {
     font-size: 1rem;
     line-height: 1.75;
-    color: #4a5568;
+    color: #d1d5db;
     margin: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-    .description {
-        color: #a0aec0;
-    }
 }
 
 @media (min-width: 768px) {
@@ -115,19 +119,69 @@
     }
 }
 
-/* Tablet and Desktop Layout */
-@media (min-width: 1024px) {
+/* Mobile - вертикальний стек (до 1200px) */
+@media (max-width: 1199px) {
     .aboutSection {
-        padding: 6rem 2rem;
+        padding: 4rem 1rem;
     }
 
     .content {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .textContent {
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet - все ще вертикальний стек, але більші відступи */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .aboutSection {
+        padding: 5rem 2rem;
+    }
+
+    .content {
+        gap: 3rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 767px) {
+    .aboutSection {
+        padding: 3rem 1rem;
+    }
+
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .description {
+        font-size: 0.9375rem;
+    }
+
+    .videoItem {
+        border-radius: 0.75rem;
+    }
+}
+
+/* Desktop - 2 колонки з 1200px */
+@media (min-width: 1200px) {
+    .aboutSection {
+        padding: 8rem 2rem;
     }
 
     .textContent {
         gap: 2rem;
+    }
+}
+
+/* Large Desktop - додаткові покращення */
+@media (min-width: 1366px) {
+    .aboutSection {
+        padding: 8rem 3rem;
+    }
+
+    .content {
+        gap: 6rem;
     }
 }

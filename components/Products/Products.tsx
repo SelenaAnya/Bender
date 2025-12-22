@@ -18,8 +18,7 @@ const Products = () => {
                 'products.bender2.feature3',
                 'products.bender2.feature4',
             ],
-            sizeBadge: '1520 Fill x 384 Hug',
-            isFeatured: true,
+            image: '/images/bender-2.png',
         },
         {
             id: 2,
@@ -31,7 +30,7 @@ const Products = () => {
                 'products.bender2.feature3',
                 'products.bender2.feature4',
             ],
-            isFeatured: false,
+            image: '/images/bender-m.png',
         },
         {
             id: 3,
@@ -43,7 +42,7 @@ const Products = () => {
                 'products.bender2.feature3',
                 'products.bender2.feature4',
             ],
-            isFeatured: false,
+            image: '/images/bender-l.png',
         },
     ];
 
@@ -58,21 +57,21 @@ const Products = () => {
                 {/* Products List */}
                 <div className={styles.productsList}>
                     {products.map((product) => (
-                        <div
-                            key={product.id}
-                            className={`${styles.card} ${product.isFeatured ? styles.cardFeatured : ''}`}
-                        >
+                        <div key={product.id} className={styles.card}>
                             <div className={styles.cardContent}>
                                 {/* Image Section */}
                                 <div className={styles.imageSection}>
                                     <div className={styles.imageWrapper}>
-                                        <div className={styles.imagePlaceholder}></div>
+                                        {product.image ? (
+                                            <img
+                                                src={product.image}
+                                                alt={t(product.nameKey)}
+                                                className={styles.productImage}
+                                            />
+                                        ) : (
+                                            <div className={styles.imagePlaceholder}></div>
+                                        )}
                                     </div>
-                                    {product.sizeBadge && (
-                                        <div className={styles.sizeBadge}>
-                                            {product.sizeBadge}
-                                        </div>
-                                    )}
                                 </div>
 
                                 {/* Text Section */}

@@ -31,7 +31,6 @@ const OurSteps = () => {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>{t('ourSteps.sectionTitle')}</h2>
                     <h3 className={styles.heading}>{t('ourSteps.heading')}</h3>
                 </div>
 

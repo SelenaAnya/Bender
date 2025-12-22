@@ -22,12 +22,9 @@ export default function Home() {
         <main className={styles.main}>
           <About_Us />
           <Products />
-          <OurSteps />
-          <WeAlreadyHaveSupport />
           <ForWhom />
           <OurSteps />
           <WeAlreadyHaveSupport />
-
           <Testimonials />
         </main>
         <Footer />

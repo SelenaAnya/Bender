@@ -11,6 +11,7 @@ const Footer = () => {
         email: '',
         phone: '',
     });
+    const [copied, setCopied] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -24,11 +25,17 @@ const Footer = () => {
         e.preventDefault();
         // Handle form submission
         console.log('Form submitted:', formData);
+        
+        // TODO: Add actual form submission logic
+        // For example: send to API endpoint or email service
     };
 
     const handleCopyEmail = () => {
-        navigator.clipboard.writeText('post@gmail.com');
-        // Optional: Show toast notification
+        const email = 'post@gmail.com';
+        navigator.clipboard.writeText(email).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
     };
 
     return (
@@ -36,7 +43,7 @@ const Footer = () => {
             <div className={styles.container}>
                 {/* Main Content */}
                 <div className={styles.content}>
-                    {/* Left Section */}
+                    {/* Left Section - Info */}
                     <div className={styles.leftSection}>
                         <h2 className={styles.heading}>
                             {t('footer.heading')}
@@ -60,28 +67,50 @@ const Footer = () => {
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                 />
                             </svg>
-                            <span className={styles.emailText}>{t('footer.email')}:</span>
-                            <a href="mailto:post@gmail.com" className={styles.emailLink}>
+                            <span className={styles.emailText}>
+                                {t('footer.email')}:
+                            </span>
+                            <a 
+                                href="mailto:post@gmail.com" 
+                                className={styles.emailLink}
+                            >
                                 post@gmail.com
                             </a>
                             <button
                                 className={styles.copyButton}
                                 onClick={handleCopyEmail}
                                 aria-label={t('footer.copyEmail')}
+                                title={copied ? 'Скопійовано!' : t('footer.copyEmail')}
                             >
-                                <svg
-                                    className={styles.copyIcon}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                    />
-                                </svg>
+                                {copied ? (
+                                    <svg
+                                        className={styles.copyIcon}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M5 13l4 4L19 7"
+                                        />
+                                    </svg>
+                                ) : (
+                                    <svg
+                                        className={styles.copyIcon}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                                        />
+                                    </svg>
+                                )}
                             </button>
                         </div>
                     </div>
@@ -100,6 +129,7 @@ const Footer = () => {
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     className={styles.input}
+                                    placeholder={t('footer.nameLabel')}
                                     required
                                 />
                             </div>
@@ -115,6 +145,7 @@ const Footer = () => {
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     className={styles.input}
+                                    placeholder={t('footer.emailLabel')}
                                     required
                                 />
                             </div>
@@ -129,7 +160,7 @@ const Footer = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleInputChange}
-                                    placeholder="+38 (0__) ___-__-__"
+                                    placeholder="38 (0__) ___-__-__"
                                     className={styles.input}
                                     required
                                 />
@@ -148,10 +179,10 @@ const Footer = () => {
                         {t('footer.copyright')}
                     </p>
                     <div className={styles.links}>
-                        <a href="#" className={styles.link}>
+                        <a href="#privacy" className={styles.link}>
                             {t('footer.privacyLink')}
                         </a>
-                        <a href="#" className={styles.link}>
+                        <a href="#terms" className={styles.link}>
                             {t('footer.termsLink')}
                         </a>
                     </div>

@@ -1,6 +1,5 @@
 .section {
     padding: 4rem 1rem;
-    background: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
     color: #ffffff;
     position: relative;
 }
@@ -97,7 +96,7 @@
 .cardHover {
     transform: translateY(-8px);
     border-color: #ff6b35;
-    box-shadow: 0 12px 32px rgba(255, 107, 53, 0.25);
+    /* box-shadow: 0 12px 32px rgba(255, 107, 53, 0.25); */
 }
 
 .card:hover::before,
