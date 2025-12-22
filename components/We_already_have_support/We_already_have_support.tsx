@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Image from 'next/image';
 import styles from './We_already_have_support.module.css';
 
 interface SupportUnit {
@@ -19,46 +18,42 @@ const WeAlreadyHaveSupport = () => {
         {
             id: 1,
             nameKey: 'support.unit1',
-<<<<<<< HEAD
             logo: '/svg/logo/rybij.svg',
-=======
-            logo: '/logos/unit1.svg',
->>>>>>> c9d3c38f2ab172f468461094ceac4325f48f676d
         },
         {
             id: 2,
             nameKey: 'support.unit2',
-            logo: '/logos/unit2.svg',
+            logo: '/svg/logo/3oshbr.svg',
         },
         {
             id: 3,
             nameKey: 'support.unit3',
-            logo: '/logos/unit3.svg',
+            logo: '/svg/logo/6prikordonnyi.svg',
         },
         {
             id: 4,
             nameKey: 'support.unit4',
-            logo: '/logos/unit4.svg',
+            logo: '/svg/logo/DaVinchi.svg',
         },
         {
             id: 5,
             nameKey: 'support.unit5',
-            logo: '/logos/unit5.svg',
+            logo: '/svg/logo/dozor.svg',
         },
         {
             id: 6,
             nameKey: 'support.unit6',
-            logo: '/logos/unit6.svg',
+            logo: '/svg/logo/Khartiya.svg',
         },
         {
             id: 7,
             nameKey: 'support.unit7',
-            logo: '/logos/unit7.svg',
+            logo: '/svg/logo/pomsta.svg',
         },
         {
             id: 8,
             nameKey: 'support.unit8',
-            logo: '/logos/unit8.svg',
+            logo: '/svg/logo/stricks.svg',
         },
     ];
 
@@ -102,12 +97,10 @@ const WeAlreadyHaveSupport = () => {
                             onMouseLeave={() => setHoveredCard(null)}
                         >
                             <div className={styles.logoWrapper}>
-                                <Image
+                                <img
                                     src={unit.logo}
                                     alt={t(unit.nameKey)}
-                                    fill
                                     className={styles.logo}
-                                    style={{ objectFit: 'contain' }}
                                 />
                             </div>
                             <span className={styles.unitName}>{t(unit.nameKey)}</span>
