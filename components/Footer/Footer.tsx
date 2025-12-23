@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import styles from './Footer.module.css';
 
+
 const Footer = () => {
     const { t } = useLanguage();
     const [formData, setFormData] = useState({

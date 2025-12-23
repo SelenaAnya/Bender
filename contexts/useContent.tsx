@@ -4,8 +4,15 @@ import { useState, useEffect } from 'react';
 import { useLanguage } from './LanguageContext';
 import type { ContentData } from '@/types/content';
 
-// Якщо типи в іншому місці, змініть шлях:
-// import type { ContentData } from '../types/content';
+type TranslatableKey<T> = {
+  [K in keyof T]: K extends `${string}_uk` 
+    ? K extends `${infer Base}_uk` 
+      ? `${Base}_en` extends keyof T 
+        ? Base 
+        : never 
+      : never 
+    : never;
+}[keyof T];
 
 export function useContent() {
   const { language } = useLanguage();
@@ -36,22 +43,82 @@ export function useContent() {
     }
   };
 
-  // Хелпер функція для отримання перекладу
-  const t = (section: string, key: string) => {
-    if (!content) return '';
-    
-    const sectionData = (content as any)[section];
-    if (!sectionData) return '';
+  // Спеціалізовані функції для кожної секції
+  const footer = {
+    get: (key: TranslatableKey<ContentData['footer']>): string => {
+      if (!content?.footer) return '';
+      const fullKey = `${key}_${language}` as keyof ContentData['footer'];
+      const value = content.footer[fullKey];
+      return typeof value === 'string' ? value : '';
+    },
+    getEmail: () => content?.footer.email || '',
+  };
 
-    const fieldKey = `${key}_${language}`;
-    return sectionData[fieldKey] || sectionData[key] || '';
+  const aboutUs = {
+    get: (key: TranslatableKey<ContentData['aboutUs']>): string => {
+      if (!content?.aboutUs) return '';
+      const fullKey = `${key}_${language}` as keyof ContentData['aboutUs'];
+      const value = content.aboutUs[fullKey];
+      return typeof value === 'string' ? value : '';
+    },
+    getVideo: () => content?.aboutUs.video || '',
+  };
+
+  const support = {
+    get: (key: TranslatableKey<ContentData['support']>): string => {
+      if (!content?.support) return '';
+      const fullKey = `${key}_${language}` as keyof ContentData['support'];
+      const value = content.support[fullKey];
+      return typeof value === 'string' ? value : '';
+    },
+    getUnits: () => content?.support.units || [],
+  };
+
+  const products = {
+    getAll: () => content?.products || [],
+    getName: (index: number): string => {
+      const product = content?.products[index];
+      if (!product) return '';
+      const key = `name_${language}` as keyof typeof product;
+      const value = product[key];
+      return typeof value === 'string' ? value : '';
+    },
+    getDescription: (index: number): string => {
+      const product = content?.products[index];
+      if (!product) return '';
+      const key = `description_${language}` as keyof typeof product;
+      const value = product[key];
+      return typeof value === 'string' ? value : '';
+    },
+    getFeatures: (index: number): string[] => {
+      const product = content?.products[index];
+      if (!product) return [];
+      const key = `features_${language}` as keyof typeof product;
+      const value = product[key];
+      return Array.isArray(value) ? value : [];
+    },
+  };
+
+  const forWhom = {
+    getAll: () => content?.forWhom || [],
+    getTitle: (index: number): string => {
+      const item = content?.forWhom[index];
+      if (!item) return '';
+      const key = `title_${language}` as keyof typeof item;
+      const value = item[key];
+      return typeof value === 'string' ? value : '';
+    },
   };
 
   return {
     content,
     loading,
     error,
-    t,
+    footer,
+    aboutUs,
+    support,
+    products,
+    forWhom,
     refetch: fetchContent,
   };
 }

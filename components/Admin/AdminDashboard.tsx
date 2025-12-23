@@ -3,10 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import styles from './AdminDashboard.module.css';
-import type { ContentData, FooterContent, ProductContent, ForWhomContent, AboutUsContent, SupportContent } from '@/types/content';
-
-// Або якщо типи в тій же папці:
-// import type { ContentData, FooterContent, ProductContent, ForWhomContent, AboutUsContent, SupportContent } from './types';
+import type { 
+  ContentData, 
+  FooterContent, 
+  ProductContent, 
+  ForWhomContent, 
+  AboutUsContent, 
+  SupportContent,
+  SupportUnit  
+} from '@/types/content';
 
 const AdminDashboard = () => {
   const { language } = useLanguage();
@@ -313,7 +318,7 @@ interface ForWhomEditorProps {
 
 const ForWhomEditor = ({ data, onChange }: ForWhomEditorProps) => (
   <div className={styles.editor}>
-    <h2>Редагування "Для кого"</h2>
+    <h2>Редагування &quot;Для кого&quot;</h2>
     
     {data.map((item: ForWhomContent, index: number) => (
       <div key={item.id} className={styles.categoryItem}>
@@ -359,7 +364,7 @@ interface AboutUsEditorProps {
 
 const AboutUsEditor = ({ data, onChange }: AboutUsEditorProps) => (
   <div className={styles.editor}>
-    <h2>Редагування "Про нас"</h2>
+    <h2>Редагування &quot;Про нас&quot;</h2>
     
     <div className={styles.formGroup}>
       <label>Заголовок (UA):</label>
@@ -401,7 +406,7 @@ interface SupportEditorProps {
 
 const SupportEditor = ({ data, onChange }: SupportEditorProps) => (
   <div className={styles.editor}>
-    <h2>Редагування "Підтримка"</h2>
+    <h2>Редагування &quot;Підтримка&quot;</h2>
     
     <div className={styles.formGroup}>
       <label>Заголовок (UA):</label>
