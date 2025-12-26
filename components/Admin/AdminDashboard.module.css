@@ -222,6 +222,12 @@
     color: #10b981;
 }
 
+.editor h4 {
+    font-size: 1.125rem;
+    margin: 1.5rem 0 0.75rem;
+    color: #9ca3af;
+}
+
 .formGroup {
     margin-bottom: 1.5rem;
 }
@@ -258,7 +264,7 @@
     min-height: 80px;
 }
 
-/* Product/Category Items */
+/* Product/Category/Unit Items */
 .productItem,
 .categoryItem,
 .unitItem {
@@ -267,6 +273,78 @@
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Action Buttons */
+.addButton {
+    padding: 0.75rem 1.5rem;
+    background: #10b981;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.addButton:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.removeButton {
+    padding: 0.5rem 1rem;
+    background: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.removeButton:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+.smallAddButton {
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid #10b981;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.smallAddButton:hover {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.smallRemoveButton {
+    padding: 0.5rem 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.smallRemoveButton:hover {
+    background: rgba(239, 68, 68, 0.2);
 }
 
 /* Loading */
@@ -317,5 +395,11 @@
 
     .loginBox {
         padding: 2rem 1.5rem;
+    }
+
+    .addButton,
+    .removeButton {
+        width: 100%;
+        justify-content: center;
     }
 }

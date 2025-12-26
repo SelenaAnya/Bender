@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useLanguage } from './LanguageContext';
-import type { ContentData } from '@/types/content';
+import type { ContentData } from '@/types/content-full';
 
 type TranslatableKey<T> = {
   [K in keyof T]: K extends `${string}_uk` 

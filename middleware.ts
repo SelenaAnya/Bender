@@ -1,23 +1,28 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { jwtVerify } from 'jose';
 
-// This function can be marked `async` if using `await` inside
-export default function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // Захист адмін панелі
-  if (pathname.startsWith('/admin')) {
-    const auth = request.cookies.get('admin-auth');
+export async function middleware(request: NextRequest) {
+  if (request.nextUrl.pathname.startsWith('/admin')) {
+    const token = request.cookies.get('auth-token')?.value;
     
-    if (!auth) {
+    if (!token) {
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
+    
+    try {
+      await jwtVerify(
+        token,
+        new TextEncoder().encode(process.env.JWT_SECRET!)
+      );
+    } catch (error) {
       return NextResponse.redirect(new URL('/login', request.url));
     }
   }
-
+  
   return NextResponse.next();
 }
 
-// See "Matching Paths" below to learn more
 export const config = {
   matcher: '/admin/:path*',
 };
