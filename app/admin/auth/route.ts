@@ -1,22 +1,34 @@
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
+import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-  const { username, password } = await request.json();
-  
-  // Перевірка користувача в БД
-  const user = await db.users.findOne({ username });
-  
-  if (!user || !await bcrypt.compare(password, user.password)) {
-    return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
+  try {
+    const { password } = await request.json();
+    
+    // Простий пароль для адміна (в production використовуйте env змінну)
+    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin2025';
+    
+    if (password === ADMIN_PASSWORD) {
+      return NextResponse.json({ 
+        success: true,
+        message: 'Authentication successful' 
+      });
+    }
+    
+    return NextResponse.json(
+      { 
+        success: false,
+        error: 'Invalid password' 
+      },
+      { status: 401 }
+    );
+  } catch (error) {
+    console.error('Authentication error:', error);
+    return NextResponse.json(
+      { 
+        success: false,
+        error: 'Authentication failed' 
+      },
+      { status: 500 }
+    );
   }
-  
-  // Створення токену
-  const token = jwt.sign(
-    { userId: user.id, role: user.role },
-    process.env.JWT_SECRET!,
-    { expiresIn: '24h' }
-  );
-  
-  return NextResponse.json({ token });
 }

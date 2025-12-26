@@ -436,7 +436,7 @@ const ProductsEditor = ({ data, onChange }: ProductsEditorProps) => {
     onChange(newData);
   };
 
-  const updateProduct = (index: number, field: keyof ProductContent, value: any) => {
+  const updateProduct = (index: number, field: keyof ProductContent, value: unknown) => {
     const newData = [...data];
     newData[index] = { ...newData[index], [field]: value };
     onChange(newData);
