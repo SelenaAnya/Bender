@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+// This function can be marked `async` if using `await` inside
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Захист адмін панелі
@@ -16,6 +17,7 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
+// See "Matching Paths" below to learn more
 export const config = {
   matcher: '/admin/:path*',
 };
